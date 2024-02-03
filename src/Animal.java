@@ -2,9 +2,11 @@ import java.io.PrintStream;
 import java.time.LocalDate;
 
 public class Animal {
+
     protected String name;
     protected LocalDate birthDay;
-    protected Illness illness;
+
+   public Illness illness;
 
     public Animal(String name, LocalDate birthDay, Illness illness) {
         this.name = name;
@@ -16,15 +18,15 @@ public class Animal {
         this("Вася", LocalDate.now(), new Illness("Болезнь"));
     }
 
-    private void wakeUp() {
-        System.out.println(this.getType() + " проснулся");
+    public Animal(String a) {
+        new Illness(a);
     }
 
-    private void wakeUp(String time) {
-        PrintStream var10000 = System.out;
-        String var10001 = this.getType();
-        var10000.println(var10001 + " проснулся в " + time);
+    private void wakeUp() {
+        System.out.println(this.name + " проснулся");
     }
+
+
 
     private void hunt() {
         System.out.println(this.getType() + " охотится");
@@ -48,7 +50,7 @@ public class Animal {
     public void setIllness(Illness illness) {
         this.illness = illness;
     }
-
+// создаем методы гетеры
     public String getName() {
         return this.name;
     }
@@ -60,31 +62,51 @@ public class Animal {
     public Illness getIllness() {
         return this.illness;
     }
-
+// печатаем название класса
     public String getType() {
         return this.getClass().getSimpleName();
     }
-
+// метод вывода данных в нужном формате
     public String toString() {
         return String.format("name =%s, birthday =%s, illness =%s", this.name, this.birthDay, this.illness);
     }
 
-    public String toGo(){
-        if (name.equals("рыбка"))
-        return ("рыбы не бегают");
-        else
-        return ((name) +" бежит");
-    }
-    public String fly(){
-        if ((name.equals("рыбка")) || (name.equals("Персик")))
-            return (name) + " не летает";
-        else
-        return ((name)+ " летит");
-    }
-    public String swim(){
-        if (name.equals("орел"))
-            return ("орлы не плавают");
-        else
-        return (name)+ " плывет";
-    }
+//     public void toGo() {
+//        System.out.println("животное бежит");
+//    }
+
+//    public void toFly() {
+//        System.out.println(" птица летит");
+//    }
+
+
+
+
+
+
+
+
+
+
+//    public String toGo(){
+//        if (name.equals("рыбка"))
+//        return ("рыбы не бегают");
+//        else
+//        return ((name) +" бежит");
+//    }
+//    public String fly(){
+//        if ((name.equals("рыбка")) || (name.equals("Персик")))
+//            return (name) + " не летает";
+//        else
+//        return ((name)+ " летит");
+//    }
+//    public String swim(){
+//        if (name.equals("орел"))
+//            return ("орлы не плавают");
+//        else
+//        return (name)+ " плывет";
+//    }
+
+
+
 }

@@ -9,4 +9,5 @@ public class Illness {
     public String toString() {
         return this.name;
     }
+
 }

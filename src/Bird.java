@@ -5,11 +5,21 @@
 
 import java.time.LocalDate;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements Flyable {
     private int wingQuantity;
 
     public Bird(String name, LocalDate birthDay, Illness illness, int wingQuantity) {
         super(name, birthDay, illness);
         this.wingQuantity = wingQuantity;
+    }
+
+    @Override
+    public double fly() {
+        return 15.4;
+    }
+
+    @Override
+    public String toFly() {
+        return name + " летит со скоростью  "  + fly() + " км/ч " ;
     }
 }
