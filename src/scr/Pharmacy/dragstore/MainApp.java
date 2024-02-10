@@ -33,7 +33,16 @@ public class MainApp {
         pharmacies.add(safirin);
         pharmacies.add(curin);
 
-        getPharmaciesSortedByInterPower(pharmacies);
+
+        for (Pharmacy a:pharmacies ) {
+
+
+            System.out.println(a);
+        }
+
+
+
+//        getPharmaciesSortedByInterPower(pharmacies);
 
 //        getPharmaciesSortedByTotalPower(pharmacies);
 //
@@ -66,5 +75,9 @@ public class MainApp {
     private static void getPharmaciesSortedByTotalWeight(List<Pharmacy> pharmacies, Comparator<Pharmacy> comparator) {
         pharmacies.sort(comparator);
         System.out.println(pharmacies);
+
+
+
+        }
     }
-}
+
