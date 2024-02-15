@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class VeterinaryClinic {
+public class VeterinaryClinic  {
 
 
     private List<Animal> patient;

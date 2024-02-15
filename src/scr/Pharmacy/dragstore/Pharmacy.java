@@ -20,7 +20,7 @@ public  class Pharmacy implements Iterator<Component>,Comparable<Pharmacy> {
         return name;
     }
 
-    public Pharmacy addComponent(Component item) {
+        public Pharmacy addComponent(Component item) {
         components.add(item);
         return this;
     }

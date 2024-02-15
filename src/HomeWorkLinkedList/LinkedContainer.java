@@ -15,9 +15,9 @@ public class LinkedContainer<E> implements LinkedInterface<E>, Iterable<E>, Desc
 
 
     @Override
-    public void addLast(Object o) {
+    public void addLast(E e) {
         NodeLinked<E> prev = lstNode;
-        prev.setCurrentElement((E) o);
+        prev.setCurrentElement(e);
         lstNode = new NodeLinked<E>(null, prev, null);
         prev.setNextElement(lstNode);
         size++;
@@ -26,9 +26,9 @@ public class LinkedContainer<E> implements LinkedInterface<E>, Iterable<E>, Desc
 
 
     @Override
-    public void addFirst(Object o) {
+    public void addFirst(E e) {
         NodeLinked<E> next = fstNode;
-        next.setCurrentElement((E) o);
+        next.setCurrentElement(e);
         fstNode = new NodeLinked<>(null, null, next);
         next.setPrevElement(fstNode);
         size++;

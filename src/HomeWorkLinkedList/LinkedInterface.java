@@ -2,7 +2,7 @@ package HomeWorkLinkedList;
 
 import java.util.LinkedList;
 
-public interface LinkedInterface <E> {
+public interface LinkedInterface<E> {
 
 
     void addLast(E e);
